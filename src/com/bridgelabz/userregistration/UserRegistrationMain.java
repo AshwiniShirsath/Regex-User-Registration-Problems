@@ -1,9 +1,8 @@
 package com.bridgelabz.userregistration;
 /*
  * @ author: Ashwini 
- * As a User need to follow pre defined Mobile Format.
- * Mobile Format - E.g. 91 9919819801 
- * - Country code follow by space and 10 digit number
+ * As a User need to follow pre-defined Password rules.
+ * Rule1 – minimum 8 Characters
  */
 public class UserRegistrationMain {
 	public static void main(String[] args) {
@@ -14,5 +13,6 @@ public class UserRegistrationMain {
 		validateUserInfo.checkLastName();
 		validateUserInfo.checkEmail();
 		validateUserInfo.checkMobileNumber();
+		validateUserInfo.checkPassword();
 	}
 }
