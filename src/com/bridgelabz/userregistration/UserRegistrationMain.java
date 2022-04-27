@@ -2,7 +2,7 @@ package com.bridgelabz.userregistration;
 /*
  * @ author: Ashwini 
  * As a User need to follow pre-defined Password rules.
- * Rule1 – minimum 8 Characters
+ * Rule3 – Should have at least 1 Upper Case & 1 Number
  */
 public class UserRegistrationMain {
 	public static void main(String[] args) {
