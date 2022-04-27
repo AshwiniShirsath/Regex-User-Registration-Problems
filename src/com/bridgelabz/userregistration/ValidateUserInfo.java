@@ -16,7 +16,7 @@ public class ValidateUserInfo {
 		if (Pattern.matches("^[A-Z]{1}[a-z]{2,}", firstName)) {
 			System.out.println("first name is valid");
 		} else {
-			System.out.println("first name is invalid. Enter Again ");
+			System.out.println("first name is invalid. Enter Again: ");
 			checkFirstName();
 		}
 	}
@@ -35,7 +35,7 @@ public class ValidateUserInfo {
 		if (matchFound) {
 			System.out.println("Last Name is valid");
 		} else {
-			System.out.println("Last Name is invalid. Enter again ");
+			System.out.println("Last Name is invalid. Enter again: ");
 			checkLastName();
 		}
 	}
@@ -53,8 +53,26 @@ public class ValidateUserInfo {
 		if (matchFound) {
 			System.out.println("Email is valid");
 		} else {
-			System.out.println("Email is invalid. Enter Email Again ");
+			System.out.println("Email is invalid. Enter Email Again: ");
 			checkEmail();
+		}
+	}
+
+	// Method Checking Mobile Number with Regex pattern
+	public void checkMobileNumber() {
+		System.out.println("Enter the Mobile Number : ");
+		String mobileNumber = scan.nextLine();
+		// Creating/Defining a pattern to be searched
+		Pattern pattern = Pattern.compile("^[0-9]{2}+[ ][0-9]{10}$");
+		// matcher searching the above pattern
+		Matcher matcher = pattern.matcher(mobileNumber);
+		// matchFound store true if pattern matches
+		boolean matchFound = matcher.find();
+		if (matchFound) {
+			System.out.println("Mobile Number is valid");
+		} else {
+			System.out.println("Mobile Number is invalid. Enter Again: ");
+			checkMobileNumber();
 		}
 	}
 }
